@@ -1,9 +1,10 @@
-import Head from 'next/head'
-import Image from 'next/image'
-import { Inter } from '@next/font/google'
-import styles from '../styles/Home.module.css'
+import Head from "next/head";
+import Image from "next/image";
+import { Inter } from "@next/font/google";
+import styles from "../styles/Home.module.css";
+import Link from "next/link";
 
-const inter = Inter({ subsets: ['latin'] })
+const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {
   return (
@@ -26,7 +27,7 @@ export default function Home() {
               target="_blank"
               rel="noopener noreferrer"
             >
-              By{' '}
+              By{" "}
               <Image
                 src="/vercel.svg"
                 alt="Vercel Logo"
@@ -60,6 +61,28 @@ export default function Home() {
         </div>
 
         <div className={styles.grid}>
+          <Link
+            href="/learn/angular"
+            className={styles.card}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <h2 className={inter.className}>
+              Angular <span>-&gt;</span>
+            </h2>
+            <p className={inter.className}>Learn Angular</p>
+          </Link>
+          <Link
+            href="/learn/react"
+            className={styles.card}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <h2 className={inter.className}>
+              React <span>-&gt;</span>
+            </h2>
+            <p className={inter.className}>Learn React</p>
+          </Link>
           <a
             href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
             className={styles.card}
@@ -119,5 +142,5 @@ export default function Home() {
         </div>
       </main>
     </>
-  )
+  );
 }
